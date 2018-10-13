@@ -20,4 +20,6 @@ public class Customer {
 	private LocalDate dob;
 	
 	private Float anualSalary;
+	
+	private String address;
 }
