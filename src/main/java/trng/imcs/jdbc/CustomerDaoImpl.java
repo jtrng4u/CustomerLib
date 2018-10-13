@@ -25,7 +25,7 @@ public class CustomerDaoImpl implements CustomerDao {
 				LocalDate dob = rs.getDate("dob") != null ? rs.getDate("dob").toLocalDate() : null;
 				Float salary = rs.getFloat("salary");
 
-				return new Customer(id, name, dob, salary);
+				return new Customer(id, name, dob, salary, "ABC Street");
 			}
 		}
 		return null;

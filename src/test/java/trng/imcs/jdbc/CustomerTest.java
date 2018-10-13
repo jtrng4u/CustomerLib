@@ -17,7 +17,7 @@ public class CustomerTest {
 		Float anualSalary = 2000f;
 		
 		//when
-		Customer customer = new Customer(id, name, dob, anualSalary);
+		Customer customer = new Customer(id, name, dob, anualSalary, "ABC Street");
 		
 		//assert
 		assertNotNull(customer.getDob());
