@@ -17,7 +17,9 @@ public class CustomerDaoImpl implements CustomerDao {
 			String sql = "select customer_id, name, dob, salary from Customer where customer_id = ? ";
 			PreparedStatement ps = connection.prepareStatement(sql);
 			ps.setInt(1, customerId);
-
+			System.out.println("One")
+			System.out.println("Two")
+			System.out.println("Three")
 			ResultSet rs = ps.executeQuery();
 			if (rs.next()) {
 				Integer id = rs.getInt("customer_id");
@@ -28,11 +30,13 @@ public class CustomerDaoImpl implements CustomerDao {
 				return new Customer(id, name, dob, salary, "ABC Street");
 			}
 		}
+		System.out.println("Completed");
 		return null;
 	}
 
 	@Override
 	public Customer save(Customer customer) throws SQLException {
+		System.out.println("Save is called");
 		try (Connection connection = createConnection();) {
 			String sql = "insert into  Customer (name, dob, salary) values (?, ?, ?) ";
 			PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
@@ -51,6 +55,7 @@ public class CustomerDaoImpl implements CustomerDao {
 				}
 			}
 		}
+		System.out.println("Save is completed");
 		return customer;
 	}
 
