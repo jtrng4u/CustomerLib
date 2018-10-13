@@ -108,4 +108,10 @@ public class CustomerDaoImpl implements CustomerDao {
 
 		return connection;
 	}
+
+	@Override
+	public boolean isExist(Integer customerId) throws SQLException {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }
