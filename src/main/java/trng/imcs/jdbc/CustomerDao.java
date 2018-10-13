@@ -21,5 +21,7 @@ public interface CustomerDao {
 	public boolean delete(Integer customerId) throws SQLException;
 
 	public List<Customer> getCustomers(LocalDate dob) throws SQLException;
+	
+	public boolean isExist(Integer customerId) throws SQLException;
 
 }
